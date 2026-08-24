@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Apply | Ambition</title>
+		<link rel="stylesheet" href="styles.css" />
+</head>
+	<body class="apply-page">
+		<header class="site-header">
+			<div class="container nav-bar">
+				<a href="index.html" class="brand">
+					<img src="LogoText.png" alt="Ambition Logo" class="brand-logo" />
+				</a>
+				<nav class="nav-links">
+					<a href="index.html" class="nav-pill">Home</a>
+					<a href="about.html" class="nav-pill">About</a>
+					<a href="donate.html" class="btn btn-primary">Donate</a>
+				</nav>
+			</div>
+		</header>
+
+		<main class="container apply-main">
+			<section class="apply-intro">
+				<p class="eyebrow">Start here</p>
+				<h1>Apply to Ambition.</h1>
+				<p class="hero-text">Tell us about your idea and what support would help you take the next step.</p>
+			</section>
+
+			<section class="card apply-card">
+				<p class="card-label">Your application</p>
+
+		<form id="applyForm" action="https://formspree.io/f/maewaldl" method="POST">
+			<label>
+				Full Name
+				<input type="text" id="name" name="name" required />
+			</label>
+
+			<label>
+				Your Email
+				<input type="email" id="email" name="email" required />
+			</label>
+
+			<label>
+				Subject
+				<input type="text" id="subject" name="subject" value="Ambition Application" required />
+			</label>
+
+			<label>
+				What is your idea?
+				<textarea id="idea" name="project_idea" required></textarea>
+			</label>
+
+			<label>
+				Why do you need our funding?
+				<textarea id="funding" name="funding_need" required></textarea>
+			</label>
+
+			<label>
+				Why are you applying?
+				<textarea id="message" name="application_reason" required></textarea>
+			</label>
+
+			<label class="terms-agreement" for="applicationTerms">
+				<input id="applicationTerms" name="terms_agreed" type="checkbox" required />
+				<span>I agree to the <a href="terms.html" target="_blank" rel="noopener">Terms and Conditions</a>.</span>
+			</label>
+
+			<p class="form-message" id="applyMessage" role="alert" aria-live="polite"></p>
+			<button class="btn btn-primary" type="submit">Send application</button>
+		</form>
+
+			<div class="small">Your application will be sent securely to the Ambition team.</div>
+			</section>
+	</main>
+
+		<footer class="site-footer">
+			<div class="container footer-row">
+				<p>© 2026 Ambition. Built for the next generation.</p>
+				<a href="index.html">Back to home</a>
+			</div>
+		</footer>
+
+</body>
+</html>

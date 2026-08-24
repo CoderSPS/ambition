@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Projects | Ambition</title>
+		<meta name="description" content="Manage Ambition projects and share progress with the community." />
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body class="workspace-page">
+		<header class="site-header">
+			<div class="container nav-bar">
+				<a href="index.html" class="brand">
+					<img src="LogoText.png" alt="Ambition Logo" class="brand-logo" />
+				</a>
+				<nav class="nav-links">
+					<a href="#my-projects" class="nav-pill">My projects</a>
+					<a href="#gallery" class="nav-pill">Gallery</a>
+					<a href="index.html" class="nav-pill">Log out</a>
+				</nav>
+			</div>
+		</header>
+
+		<main class="workspace-main">
+			<section class="workspace-hero">
+				<div class="container workspace-hero-row">
+					<div>
+						<p class="eyebrow">Your project workspace</p>
+						<h1>Make the next step visible.</h1>
+						<p class="hero-text">Build in public, share the messy middle, and give your idea a place to grow.</p>
+					</div>
+					<div class="workspace-status"><span class="status-dot"></span> Workspace active</div>
+				</div>
+			</section>
+
+			<section class="workspace-section" id="my-projects">
+				<div class="container">
+					<div class="workspace-section-heading">
+						<div>
+							<p class="eyebrow">Creator dashboard</p>
+							<h2>My projects</h2>
+						</div>
+						<button class="btn btn-primary" type="button" data-toggle-panel="newProjectPanel">+ New project</button>
+					</div>
+
+					<div class="workspace-grid">
+						<article class="project-card project-card-empty">
+							<div class="empty-project-mark">+</div>
+							<h3>Start something new</h3>
+							<p>Give your next idea a home, then invite people into the process.</p>
+							<button class="btn" type="button" data-toggle-panel="newProjectPanel">Create a project</button>
+						</article>
+					</div>
+
+					<form class="workspace-panel is-hidden" id="newProjectPanel">
+						<div class="panel-heading"><div><p class="eyebrow">Project setup</p><h3>Name your next idea</h3></div><button class="panel-close" type="button" data-toggle-panel="newProjectPanel" aria-label="Close">×</button></div>
+						<p class="panel-copy">New projects are available after your application is accepted by the Ambition team.</p>
+						<div class="workspace-form-grid">
+							<label>Project name<input type="text" name="project-name" placeholder="e.g. Neighborhood Radio" required /></label>
+							<label>Short description<textarea name="project-description" placeholder="What are you making, and why does it matter?" required></textarea></label>
+						</div>
+						<p class="form-message" id="newProjectMessage" role="alert" aria-live="polite"></p>
+						<button class="btn btn-primary" type="submit">Create project</button>
+					</form>
+				</div>
+			</section>
+
+			<section class="workspace-section workspace-section-tinted" id="updates">
+				<div class="container workspace-two-column">
+					<div>
+						<p class="eyebrow">Project updates</p>
+						<h2>Share your progress.</h2>
+						<p class="section-copy">Keep supporters close to the work with honest, timestamped progress.</p>
+						<form class="workspace-panel update-form" id="updateForm">
+							<label>Update title<input type="text" name="update-title" placeholder="What moved forward today?" required /></label>
+							<label>Write an update<textarea name="update-body" placeholder="Share a win, a question, or what you are trying next..." required></textarea></label>
+							<label>Attach media<input class="media-input" type="file" name="media" accept="image/*,video/*" multiple /></label>
+							<div class="media-preview" aria-live="polite"></div>
+							<p class="form-message" role="alert" aria-live="polite"></p>
+							<button class="btn btn-primary" type="submit">Publish update</button>
+						</form>
+					</div>
+					<div class="update-list"></div>
+				</div>
+			</section>
+
+			<section class="workspace-section" id="gallery">
+				<div class="container">
+					<div class="workspace-section-heading"><div><p class="eyebrow">Community gallery</p><h2>See what people are making.</h2></div><a class="login-link" href="#gallery">Explore all projects →</a></div>
+					<div class="gallery-grid">
+						<article class="gallery-card"><div class="gallery-art gallery-art-green"><span>COMMON<br />THREAD</span></div><div class="gallery-card-copy"><span class="project-label">Community</span><h3>Common Thread</h3><p>Jules is turning discarded fabric into free repair kits for neighbors.</p><span class="gallery-author">By Jules M.</span></div></article>
+						<article class="gallery-card"><div class="gallery-art gallery-art-orange"><span>LOW<br />BATTERY</span></div><div class="gallery-card-copy"><span class="project-label">Technology</span><h3>Low Battery</h3><p>A friendly guide that helps students find charging spots at school.</p><span class="gallery-author">By Mateo R.</span></div></article>
+						<article class="gallery-card"><div class="gallery-art gallery-art-blue"><span>SOFT<br />LANDING</span></div><div class="gallery-card-copy"><span class="project-label">Story</span><h3>Soft Landing</h3><p>An audio zine about moving, belonging, and making a new place feel yours.</p><span class="gallery-author">By Priya K.</span></div></article>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer"><div class="container footer-row"><p>© 2026 Ambition. Built for the next generation.</p><a href="index.html">Back to home</a></div></footer>
+		<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+		<script src="supabase-config.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>

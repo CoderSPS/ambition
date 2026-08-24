@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Application Review | Ambition</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body class="apply-page">
+		<header class="site-header">
+			<div class="container nav-bar">
+				<a href="index.html" class="brand">
+					<img src="LogoText.png" alt="Ambition Logo" class="brand-logo" />
+				</a>
+				<nav class="nav-links">
+					<a href="apply.html" class="nav-pill">Applications</a>
+					<a href="projects.html" class="nav-pill">Projects</a>
+				</nav>
+			</div>
+		</header>
+
+		<main class="container apply-main admin-main is-hidden" id="adminContent">
+			<section class="apply-intro">
+				<p class="eyebrow">Ambition team</p>
+				<h1>Review applications.</h1>
+				<p class="hero-text">Accept an application to unlock project creation for that applicant.</p>
+			</section>
+			<section id="applicationList" class="application-list" aria-live="polite"></section>
+		</main>
+		<p class="form-message admin-access-message" id="adminAccessMessage" role="alert" aria-live="polite"></p>
+
+		<footer class="site-footer">
+			<div class="container footer-row">
+				<p>© 2026 Ambition. Built for the next generation.</p>
+				<a href="index.html">Back to home</a>
+			</div>
+		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+		<script src="supabase-config.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
