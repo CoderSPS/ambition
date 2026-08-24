@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Log in | Ambition</title>
+		<meta
+			name="description"
+			content="Log in to manage Ambition projects."
+		/>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body class="apply-page login-page">
+		<header class="site-header">
+			<div class="container nav-bar">
+				<a href="index.html" class="brand">
+					<img src="LogoText.png" alt="Ambition Logo" class="brand-logo" />
+				</a>
+				<nav class="nav-links">
+					<a href="about.html" class="nav-pill">About</a>
+					<a href="index.html" class="nav-pill">Home</a>
+				</nav>
+			</div>
+		</header>
+
+		<main class="apply-main login-main">
+			<section class="apply-intro login-intro">
+				<p class="eyebrow">Project workspace</p>
+				<h1>Log in to manage projects.</h1>
+				<p>Use your Ambition account to continue.</p>
+			</section>
+
+			<section class="apply-card login-card" aria-labelledby="login-heading">
+				<h2 id="login-heading">Welcome back</h2>
+				<form id="loginForm" action="projects.html" method="get">
+					<label for="email">
+						Email address
+						<input id="email" name="email" type="email" autocomplete="email" required />
+					</label>
+
+					<label for="password">
+						Password
+						<span class="password-field">
+							<input id="password" name="password" type="password" autocomplete="current-password" required />
+							<button class="password-toggle" type="button" data-password-toggle="password" aria-label="Show password" title="Show password"><span aria-hidden="true">&#128065;</span></button>
+						</span>
+					</label>
+
+					<label class="login-remember" for="remember">
+						<input id="remember" name="remember" type="checkbox" />
+						<span>Remember me</span>
+					</label>
+
+					<p class="form-message" id="loginMessage" role="alert" aria-live="polite"></p>
+					<button class="btn btn-primary" type="submit">Log in</button>
+					<a class="login-link" href="signup.html">New to Ambition? Sign up</a>
+					<a class="login-link" href="mailto:hello@ambition.org">Need help signing in?</a>
+				</form>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container footer-row">
+				<p>© 2026 Ambition. Built for the next generation.</p>
+				<a href="index.html">Back to home</a>
+			</div>
+		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+		<script src="supabase-config.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
